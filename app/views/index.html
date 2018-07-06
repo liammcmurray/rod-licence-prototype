@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What type of fishing licence do you want?
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                What type of fishing licence do you want?
+              </h1>
+            </legend>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Which fishing licence do I need?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>A trout and coarse licence allows you to fish for all freshwater fish, but not for salmon or sea trout.</p>
+                <p>A salmon and sea trout licence allows you to fish for salmon and sea trout as well as all freshwater fish included in the trout and coarse licence.</p>
+              </div>
+            </details>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="licence-type-1" name="licence-type" type="radio" value="trout-and-course">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="where-do-you-live-1">
+                Trout and coarse
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="licence-type-2" name="licence-type" type="radio" value="salmon">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="where-do-you-live-2">
+                Salmon and sea trout<br><span class="govuk-!-font-weight-regular">includes trout and coarse fish</span>
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button type="submit" class="govuk-button">Continue</button>
+      </form>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="payment-summary-small">
+        <h2 class="govuk-heading-m">How much will this cost?</h2>
+        <h3 class="govuk-heading-s">Concession text if valid</h3>
+        <dl>
+          <dt class="govuk-body-m">Trout and coarse</dt>
+          <dd class="govuk-heading-l">£20</dd>
+          <dt class="govuk-body-m">Salmon and sea trout</dt>
+          <dd class="govuk-heading-l">£80</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

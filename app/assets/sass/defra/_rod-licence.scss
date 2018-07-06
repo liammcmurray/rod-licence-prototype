@@ -1,0 +1,23 @@
+// ROD LICENCE BESPOKE STYLE //
+// ************************* //
+
+.payment-summary-small {
+  background-color: govuk-colour('grey-4');
+  border: 10px solid govuk-colour('grey-3');
+  @media screen and (max-width: 641px) {margin-top: 10px;}
+  padding: 15px;
+
+  dl {
+    margin-top: 0;
+  }
+  dt {
+    margin-bottom: 0;
+  }
+
+  dd {
+    margin: 0 0 15px;
+    &.govuk-heading-l {
+      padding-top: 0;
+    }
+  }
+}
