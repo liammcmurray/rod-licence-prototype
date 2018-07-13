@@ -8,6 +8,21 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#email-address-error">Please enter an email address</a>
+            </li>
+            <li>
+              <a href="#telephone-number-error">Please enter a UK mobile number</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <h1 class="govuk-heading-l">How can we send you your licence details?</h1>
       <div class="govuk-inset-text">We don’t send 1-day or 8-day licences in the post, but you must be able to produce your licence number when you go fishing.</div>
@@ -21,25 +36,23 @@
             </legend>
             <div class="govuk-radios" data-module="radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                <input checked="checked" class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
                 Email or text me my licence details
               </label>
               </div>
               <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
-                <div class="govuk-form-group">
+                <div class="govuk-form-group govuk-form-group--error">
                   <label class="govuk-label" for="contact-by-email">Email address</label>
-                  <span id="email-addressr-hint" class="govuk-hint">
-                    For example 'joeblogs@email.com'
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email">
+                  <span id="email-address-hint" class="govuk-hint">For example 'joeblogs@email.com'</span>
+                  <span id="email-address-error" class="govuk-error-message">Please enter an email address</span>
+                  <input class="govuk-input govuk-!-width-two-thirds govuk-input--error" id="contact-by-email" name="contact-by-email" type="email">
                 </div>
-                <div class="govuk-form-group">
+                <div class="govuk-form-group govuk-form-group--error">
                   <label class="govuk-label" for="contact-by-phone">Mobile phone number</label>
-                  <span id="telephone-number-hint" class="govuk-hint">
-                    For example '07911 123456'
-                  </span>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="number">
+                  <span id="telephone-number-hint" class="govuk-hint">For example '07700 900900'</span>
+                  <span id="telephone-number-error" class="govuk-error-message">Please enter a UK mobile number</span>
+                  <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone" type="number">
                 </div>
               </div>
               <div class="govuk-radios__item">
