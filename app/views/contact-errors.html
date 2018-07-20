@@ -15,10 +15,10 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#email-address-error">Please enter an email address</a>
+              <a href="#email-address-error">Please enter a valid email address</a>
             </li>
             <li>
-              <a href="#telephone-number-error">Please enter a UK mobile number</a>
+              <a href="#telephone-number-error">Please enter a valid mobile number</a>
             </li>
           </ul>
         </div>
@@ -51,8 +51,8 @@
                 <div class="govuk-form-group govuk-form-group--error">
                   <label class="govuk-label" for="contact-by-phone">Text number</label>
                   <span id="telephone-number-hint" class="govuk-hint">For example '07700 900 900'</span>
-                  <span id="telephone-number-error" class="govuk-error-message">Please enter a UK mobile number</span>
-                  <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone" type="number">
+                  <span id="telephone-number-error" class="govuk-error-message">Please enter a valid mobile number, for overseas numbers include '+' followed by your country code </span>
+                  <input type="tel" pattern="^[0-9-+\s()]*$" class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone">
                 </div>
               </div>
               <div class="govuk-radios__item">

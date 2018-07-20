@@ -11,7 +11,7 @@
 
       <h1 class="govuk-heading-l">How can we send you your licence details?</h1>
       <div class="govuk-inset-text">We don’t send 1-day or 8-day licences in the post, but you must be able to produce your licence number when you go fishing.</div>
-      <form action="contact-errors" method="post" autocomplete="off" novalidate>
+      <form action="contact-errors" method="post" autocomplete="off">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -39,7 +39,7 @@
                   <span id="telephone-number-hint" class="govuk-hint">
                     For example '07700 900 900'
                   </span>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="number">
+                  <input type="tel" pattern="^[0-9-+\s()]*$" class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone">
                 </div>
               </div>
               <div class="govuk-radios__item">
