@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Get licence details
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">How can we send you your licence details?</h1>
+      <div class="govuk-inset-text">We don’t send 1-day or 8-day licences in the post, but you must be able to produce your licence number when you go fishing.</div>
+      <form>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Choose how we send you your licence details
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                Email or text me my licence details
+              </label>
+              </div>
+              <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">Email address</label>
+                  <span id="email-addressr-hint" class="govuk-hint">
+                    For example 'angling@hotmail.com'
+                  </span>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">Text number</label>
+                  <span id="telephone-number-hint" class="govuk-hint">
+                    For example '07700 900 900'
+                  </span>
+                  <input type="tel" pattern="^[0-9-+\s()]*$" class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-2" name="how-contacted" type="radio" value="phone" data-aria-controls="how-contacted-2">
+                <label class="govuk-label govuk-radios__label" for="how-contacted-2">
+                I will write down my licence number
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <p class="govuk-body">Read about <a href="/data-protection?returnUrl=/buy/contact">how we use your personal information</a></p>
+        <div class="govuk-checkboxes" data-module="checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="opt-in-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-opt-in-conditional-1">
+            <label class="govuk-label govuk-checkboxes__label" for="opt-in-conditional-1">
+            Update me with the latest news on angling and fisheries and how you spend my licence money
+          </label>
+          </div>
+          <div class="govuk-checkboxes__conditional" id="conditional-opt-in-conditional-1">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-email">If in future you would like to stop receiving Angler news and updates, please select the unsubscribe link on the bottom of the newsletter, or call NCCC to update your news and updates preferences.</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="govuk-button">Continue</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
